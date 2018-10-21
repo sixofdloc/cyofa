@@ -3,7 +3,7 @@ A gamebook engine for the Commodore 64.  Out of the box it should be able to pla
 
 # What is the book format? 
 Books load at $1a00 - Note that the pointer tables point to the END of each page, not the beginning.
-
+```
 Bytes 0,1 - Lo/Hi byte pointer to the numPages byte
 Bytes 2,3 - Lo/Hi byte pointer to the pageAddress (HI bytes) table7
 Bytes 4,5 - Lo/Hi byte pointer to the pageAddress (LO bytes) table7
@@ -27,9 +27,11 @@ p001_end
     
     .binary "book/p002.pak",2
 p002_end
-
+```
 # What is the page data format?
 Sample page source follows:
+
+```
     *=$1000
 p000 ; book pages 1-5
     .byte PT_NORMAL ; page type
@@ -48,12 +50,15 @@ p000_opt2
     .byte 4 ;destination page for option 2
     .text "Text to display for option 2"
     .byte $00
+```
 # How is the page data processed and compressed?
 Each page file is compiled, then exomized (compressed)
 
 # What are the page types?
+```
 PT_NORMAL = $00;
 PT_TERMINATOR = $01;
+```
 
 # Are there any special characters to use in page data 
 * $ff - pauses with "PRESS SPACE" message
