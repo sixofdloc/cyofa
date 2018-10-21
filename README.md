@@ -1,5 +1,5 @@
 # What is this? 
-A gamebook engine for the Commodore 64.  Out of the box it should be able to play 
+A gamebook engine for the Commodore 64.  Out of the box it should be able to play any of the old CYOA books with < 4 options per page.
 
 # What is the book format? 
 Books load at $1a00 - Note that the pointer tables point to the END of each page, not the beginning.
@@ -65,7 +65,7 @@ PT_TERMINATOR = $01;
 * $fe (followed by a single-byte page #) - pauses and then continues at specified page
 
 # Many thanks to: 
-* _Magnus Lind_ for his excellent
+* _Magnus Lind_ for his excellent exomizer packer and depacker
 * All of the amazing gamebook authors from the 70's and 80's who brought so much joy to my childhood.
 
 
